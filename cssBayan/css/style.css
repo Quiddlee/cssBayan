@@ -28,8 +28,9 @@ body {
 
 .title {
     font-size: 7rem;
-    color: white;
+    color: #1C1C1C;
     margin-right: 1.5rem;
+    font-weight: 800;
 }
 
 .separate-line {
@@ -57,6 +58,7 @@ body {
     border-radius: .6rem;
     overflow: hidden;
     box-shadow: 0 0 6rem rgba(0, 0, 0, .5);
+    padding-bottom: 1rem;
 }
 
 .bayan-wrapper:last-child {
@@ -79,27 +81,32 @@ body {
 
 .bayan-img {
     display: block;
-    margin: 0 auto;
+    margin: 2rem auto;
     margin-bottom: 2rem;
-    width: 25rem;
+    width: 21rem;
     height: 0;
     opacity: 0;
     border-radius: .3rem;
+    filter: blur(.15rem);
     transition:
         opacity .3s,
-        height .7s cubic-bezier(.4, .9, 0, 1.08);
+        height .5s cubic-bezier(.4, .9, 0, 1.08) .03s,
+        width .3s cubic-bezier(.4, .9, 0, 1.08) .4s,
+        filter .2s;
 }
 
 .bayan-toggle:checked~.bayan-img {
     height: 30rem;
-    width: auto;
+    width: 25rem;
     opacity: 1;
+    filter: blur(0);
 }
 
 .bayan-wrapper:hover>.bayan-img {
     height: 30rem;
-    width: auto;
+    width: 25rem;
     opacity: 1;
+    filter: blur(0);
 }
 
 .bayan-wrapper:hover {
