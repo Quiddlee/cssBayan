@@ -21,26 +21,37 @@ body {
     align-content: center;
     justify-content: center;
     max-width: 120rem;
-    height: 30rem;
-    margin: 0 auto;
+    height: auto;
+    margin: 10rem auto;
 }
 
 .bayan-wrapper {
     margin-top: 1.5rem;
     width: 70vw;
-    height: 3rem;
+    height: auto;
 }
 
 .bayan-toggle {
+    opacity: 0;
     margin: 1.5rem 0;
 }
 
-.bayan-toggle:checked~.bayan-descr {
-    height: auto;
+.bayan-img {
+    display: block;
+    width: 0;
+    height: 0;
+    transition: .6s all .2s;
+    margin: 0 auto;
+}
+
+.bayan-toggle:checked~.bayan-img {
+    height: 30rem;
+    width: auto;
     opacity: 1;
 }
 
-.bayan-toggle:not(:checked)~.bayan-descr {
-    height: auto;
-    opacity: 0;
+.bayan-wrapper:hover>.bayan-img {
+    height: 30rem;
+    width: auto;
+    opacity: 1;
 }
