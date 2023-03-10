@@ -27,21 +27,28 @@ body {
 
 .bayan-wrapper {
     margin-top: 1.5rem;
-    width: 70vw;
-    height: auto;
+    min-width: 70vw;
+    min-height: .5rem;
 }
 
 .bayan-toggle {
+    display: block;
+    min-width: 100%;
+    min-height: 1rem;
     opacity: 0;
-    margin: 1.5rem 0;
+}
+
+.bayan-content {
+    font-size: 2rem;
 }
 
 .bayan-img {
     display: block;
-    width: 0;
-    height: 0;
-    transition: .6s all .2s;
     margin: 0 auto;
+    width: 25rem;
+    height: 0;
+    opacity: 0;
+    transition: .5s all;
 }
 
 .bayan-toggle:checked~.bayan-img {
@@ -54,4 +61,8 @@ body {
     height: 30rem;
     width: auto;
     opacity: 1;
+}
+
+.bayan-wrapper:hover {
+    cursor: pointer;
 }
