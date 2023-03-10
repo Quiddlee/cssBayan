@@ -12,6 +12,7 @@ html {
 
 body {
     font-family: Open Sans, sans-serif;
+    background-image: linear-gradient(to right bottom, #BB000E, #E31C25);
 }
 
 .container {
@@ -20,15 +21,46 @@ body {
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
-    max-width: 120rem;
+    max-width: 80vw;
     height: auto;
     margin: 10rem auto;
 }
 
+.title {
+    font-size: 7rem;
+    color: white;
+    margin-right: 1.5rem;
+}
+
+.separate-line {
+    display: none;
+    border: none;
+    background-color: white;
+    height: .1rem;
+    width: 3%;
+    margin-left: 1rem;
+}
+
+.bayan-head {
+    display: flex;
+    align-items: center;
+    height: 6rem;
+    background-image: linear-gradient(to right, #E31C25, #BB000E);
+}
+
 .bayan-wrapper {
-    margin-top: 1.5rem;
-    min-width: 70vw;
+    margin-top: 3rem;
+    min-width: 70%;
     min-height: .5rem;
+    background-image: linear-gradient(to right bottom, #111111, #1C1C1C);
+    color: white;
+    border-radius: .6rem;
+    overflow: hidden;
+    box-shadow: 0 0 6rem rgba(0, 0, 0, .5);
+}
+
+.bayan-wrapper:last-child {
+    margin-bottom: 4rem;
 }
 
 .bayan-toggle {
@@ -36,19 +68,26 @@ body {
     min-width: 100%;
     min-height: 1rem;
     opacity: 0;
+    cursor: pointer;
 }
 
 .bayan-content {
-    font-size: 2rem;
+    font-weight: 300;
+    font-size: 2.3rem;
+    margin-left: 2rem;
 }
 
 .bayan-img {
     display: block;
     margin: 0 auto;
+    margin-bottom: 2rem;
     width: 25rem;
     height: 0;
     opacity: 0;
-    transition: .5s all;
+    border-radius: .3rem;
+    transition:
+        opacity .3s,
+        height .7s cubic-bezier(.4, .9, 0, 1.08);
 }
 
 .bayan-toggle:checked~.bayan-img {
