@@ -1,0 +1,46 @@
+* {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    /* 10px/16px = 62.5% -> 1rem = 10px */
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Open Sans, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    max-width: 120rem;
+    height: 30rem;
+    margin: 0 auto;
+}
+
+.bayan-wrapper {
+    margin-top: 1.5rem;
+    width: 70vw;
+    height: 3rem;
+}
+
+.bayan-toggle {
+    margin: 1.5rem 0;
+}
+
+.bayan-toggle:checked~.bayan-descr {
+    height: auto;
+    opacity: 1;
+}
+
+.bayan-toggle:not(:checked)~.bayan-descr {
+    height: auto;
+    opacity: 0;
+}
