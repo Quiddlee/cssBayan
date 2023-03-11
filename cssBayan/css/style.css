@@ -1,3 +1,25 @@
+@keyframes bayanClick {
+    0% {
+        height: 30rem;
+        filter: blur(0);
+    }
+
+    40% {
+        height: 33rem;
+        filter: blur(.07rem);
+    }
+
+    60% {
+        height: 29rem;
+        filter: blur(.05rem);
+    }
+
+    100% {
+        height: 30rem;
+        filter: blur(0);
+    }
+}
+
 * {
     box-sizing: inherit;
     margin: 0;
@@ -57,18 +79,11 @@ body {
     color: white;
     border-radius: .6rem;
     overflow: hidden;
+    cursor: pointer;
     box-shadow: 0 0 6rem rgba(0, 0, 0, .5);
-    padding-bottom: 1rem;
-}
-
-.bayan-wrapper:last-child {
-    margin-bottom: 4rem;
 }
 
 .bayan-toggle {
-    display: block;
-    min-width: 100%;
-    min-height: 1rem;
     opacity: 0;
     cursor: pointer;
 }
@@ -82,14 +97,14 @@ body {
 .bayan-img {
     display: block;
     margin: 2rem auto;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     width: 21rem;
     height: 0;
     opacity: 0;
     border-radius: .3rem;
-    filter: blur(.15rem);
+    filter: blur(.3rem);
     transition:
-        opacity .3s,
+        opacity .2s,
         height .5s cubic-bezier(.4, .9, 0, 1.08) .03s,
         width .3s cubic-bezier(.4, .9, 0, 1.08) .4s,
         filter .2s;
@@ -100,6 +115,7 @@ body {
     width: 25rem;
     opacity: 1;
     filter: blur(0);
+    animation: bayanClick .4s;
 }
 
 .bayan-wrapper:hover>.bayan-img {
@@ -107,8 +123,4 @@ body {
     width: 25rem;
     opacity: 1;
     filter: blur(0);
-}
-
-.bayan-wrapper:hover {
-    cursor: pointer;
 }
