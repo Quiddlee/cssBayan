@@ -4,14 +4,24 @@
         filter: blur(0);
     }
 
-    40% {
-        height: 33rem;
+    25% {
+        height: 37rem;
         filter: blur(.07rem);
     }
 
-    60% {
-        height: 29rem;
+    40% {
+        height: 28rem;
         filter: blur(.05rem);
+    }
+
+    60% {
+        height: 30.5rem;
+        filter: blur(.03);
+    }
+
+    80% {
+        height: 29.87rem;
+        filter: blur(.01);
     }
 
     100% {
@@ -34,7 +44,12 @@ html {
 
 body {
     font-family: Open Sans, sans-serif;
-    background-image: linear-gradient(to right bottom, #BB000E, #E31C25);
+    background-image: linear-gradient(to bottom right, #BB000E, #E31C25);
+}
+
+::selection {
+    background-color: #111111;
+    color: #BB000E;
 }
 
 .container {
@@ -44,7 +59,7 @@ body {
     align-content: center;
     justify-content: center;
     max-width: 80vw;
-    height: auto;
+    min-height: 110rem;
     margin: 10rem auto;
 }
 
@@ -74,8 +89,8 @@ body {
 .bayan-wrapper {
     margin-top: 3rem;
     min-width: 70%;
-    min-height: .5rem;
-    background-image: linear-gradient(to right bottom, #111111, #1C1C1C);
+    min-height: 5rem;
+    background-image: linear-gradient(to bottom right, #111111, #1C1C1C);
     color: white;
     border-radius: .6rem;
     overflow: hidden;
@@ -105,7 +120,7 @@ body {
     filter: blur(.3rem);
     transition:
         opacity .2s,
-        height .5s cubic-bezier(.4, .9, 0, 1.08) .03s,
+        height .5s cubic-bezier(.4, .9, 0, 1.08),
         width .3s cubic-bezier(.4, .9, 0, 1.08) .4s,
         filter .2s;
 }
@@ -115,7 +130,7 @@ body {
     width: 25rem;
     opacity: 1;
     filter: blur(0);
-    animation: bayanClick .4s;
+    animation: bayanClick .5s;
 }
 
 .bayan-wrapper:hover>.bayan-img {
