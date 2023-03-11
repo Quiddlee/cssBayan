@@ -69,6 +69,7 @@ body {
     color: #1C1C1C;
     margin-right: 1.5rem;
     font-weight: 800;
+    margin-bottom: 1.5rem;
 }
 
 .bayan {
@@ -93,20 +94,17 @@ body {
 }
 
 .bayan-wrapper {
-    margin-top: 2.5rem;
     min-width: 100%;
     min-height: 5rem;
     background-image: linear-gradient(to bottom right, #111111, #1C1C1C);
     color: white;
     border-radius: .6rem;
     overflow: hidden;
-    cursor: pointer;
     box-shadow: 0 0 6rem rgba(0, 0, 0, .5);
 }
 
 .bayan-toggle {
     display: none;
-    cursor: pointer;
 }
 
 .bayan-content {
@@ -125,6 +123,7 @@ body {
     opacity: 0;
     border-radius: .3rem;
     filter: blur(.3rem);
+    will-change: height, width, transform;
     transition:
         opacity .2s,
         height .5s cubic-bezier(.4, .9, 0, 1.08),
@@ -142,15 +141,6 @@ body {
     animation: bayanClick .5s;
 }
 
-.bayan-wrapper:hover>.bayan-img {
-    margin: 3rem auto;
-    height: 30rem;
-    width: 25rem;
-    opacity: 1;
-    filter: blur(0);
-}
-
-.bayan:hover h2,
 .bayan-toggle:checked+.bayan-head>.bayan-content {
-    color: white
+    color: white;
 }

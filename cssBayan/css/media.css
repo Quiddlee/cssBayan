@@ -1,0 +1,61 @@
+@media only screen and (min-width: 64.5em) {
+    html {
+        font-size: 50%;
+    }
+
+    .bayan-wrapper {
+        cursor: pointer;
+    }
+
+    .bayan-wrapper:hover>.bayan-img {
+        margin: 3rem auto;
+        height: 30rem;
+        width: 25rem;
+        opacity: 1;
+        filter: blur(0);
+    }
+
+    .bayan:hover h2 {
+        color: white
+    }
+}
+
+@media only screen and (max-width: 64.3em) {
+    html {
+        font-size: 40%;
+    }
+
+    .bayan-toggle:checked~.bayan-img {
+        animation: none;
+    }
+
+    .container {
+        min-height: 111rem;
+    }
+}
+
+@media only screen and (max-width: 43em) {
+    html {
+        font-size: 35%;
+    }
+
+    .title {
+        font-size: 4rem;
+    }
+}
+
+@media only screen and (max-width: 33em) {
+    .bayan-img {
+        width: 21rem;
+        height: 0;
+    }
+
+    .bayan-toggle:checked~.bayan-img {
+        height: 25rem;
+        width: 20rem;
+    }
+
+    .container {
+        min-height: 106rem;
+    }
+}
