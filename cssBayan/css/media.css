@@ -1,8 +1,4 @@
-@media only screen and (min-width: 64.5em) {
-    html {
-        font-size: 50%;
-    }
-
+@media (hover: hover) {
     .bayan-wrapper {
         cursor: pointer;
     }
@@ -15,18 +11,35 @@
         filter: blur(0);
     }
 
+    .bayan-wrapper:hover>.bayan-head>.bayan-down-icon {
+        transform: rotate(180deg);
+        fill: white;
+    }
+
+    .bayan:hover svg {
+        fill: white;
+    }
+
     .bayan:hover h2 {
         color: white
+    }
+}
+
+@media (hover: none) {
+    .bayan-toggle:checked~.bayan-img {
+        animation: none;
+    }
+}
+
+@media only screen and (min-width: 64.5em) {
+    html {
+        font-size: 50%;
     }
 }
 
 @media only screen and (max-width: 64.3em) {
     html {
         font-size: 40%;
-    }
-
-    .bayan-toggle:checked~.bayan-img {
-        animation: none;
     }
 
     .container {

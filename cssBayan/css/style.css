@@ -85,12 +85,18 @@ body {
 
 .bayan-head {
     display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
     height: 6rem;
     background-image: linear-gradient(to right, #E31C25, #BB000E);
+}
+
+.bayan-down-icon {
+    height: 3rem;
+    width: 3rem;
+    fill: #1C1C1C;
+    margin-right: 2rem;
+    transition: .2s all .1s;
 }
 
 .bayan-wrapper {
@@ -143,4 +149,12 @@ body {
 
 .bayan-toggle:checked+.bayan-head>.bayan-content {
     color: white;
+}
+
+.bayan-toggle:checked+.bayan-head>.bayan-down-icon {
+    fill: white;
+}
+
+.bayan-toggle:checked+.bayan-head>.bayan-down-icon {
+    transform: rotate(180deg);
 }
