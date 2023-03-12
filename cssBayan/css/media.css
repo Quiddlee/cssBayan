@@ -33,7 +33,7 @@
 
 @media only screen and (min-width: 64.5em) {
     html {
-        font-size: 50%;
+        font-size: 55%;
     }
 }
 
@@ -54,6 +54,10 @@
 
     .title {
         font-size: 4rem;
+    }
+
+    .bayan-content {
+        font-size: 1.7rem;
     }
 }
 
