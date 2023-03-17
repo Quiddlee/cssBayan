@@ -59,7 +59,7 @@ body {
 
 .container {
     max-width: 50vw;
-    min-height: 110rem;
+    height: 100vh;
     margin: 10rem auto;
 }
 

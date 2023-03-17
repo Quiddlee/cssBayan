@@ -48,20 +48,24 @@
 }
 
 @media only screen and (max-width: 43em) {
-    html {
-        font-size: 35%;
+    .title {
+        font-size: 5rem;
     }
 
-    .title {
-        font-size: 4rem;
+    .container {
+        max-width: 75vw;
     }
 
     .bayan-content {
-        font-size: 1.7rem;
+        font-size: 2rem;
     }
 }
 
 @media only screen and (max-width: 33em) {
+    html {
+        font-size: 40%;
+    }
+
     .bayan-img {
         width: 21rem;
         height: 0;
@@ -74,5 +78,9 @@
 
     .container {
         min-height: 106rem;
+    }
+
+    .bayan-content {
+        font-size: 1.6rem;
     }
 }
