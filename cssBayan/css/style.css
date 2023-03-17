@@ -1,0 +1,159 @@
+@keyframes bayanClick {
+    0% {
+        height: 30rem;
+        filter: blur(0);
+    }
+
+    25% {
+        height: 37rem;
+        filter: blur(.13rem);
+        transform: translateY(-1rem);
+        padding-bottom: 3rem;
+    }
+
+    40% {
+        height: 28rem;
+        filter: blur(.03rem);
+        transform: translateY(0);
+        padding-bottom: 0rem;
+    }
+
+    60% {
+        height: 30.5rem;
+        filter: blur(.05);
+        transform: translateY(-.2rem);
+    }
+
+    80% {
+        height: 29.87rem;
+        filter: blur(.03);
+        transform: translateY(0rem);
+    }
+
+    100% {
+        height: 30rem;
+        filter: blur(0);
+    }
+}
+
+* {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Open Sans, sans-serif;
+    background-image: linear-gradient(to bottom right, #BB000E, #E31C25);
+}
+
+::selection {
+    background-color: #111111;
+    color: #BB000E;
+}
+
+.container {
+    max-width: 50vw;
+    height: 100vh;
+    margin: 10rem auto;
+}
+
+.title {
+    font-size: 7rem;
+    color: #1C1C1C;
+    margin-right: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+}
+
+.bayan {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    min-width: 70%;
+    min-height: 5rem;
+    margin: 0 auto;
+}
+
+.bayan-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 6rem;
+    background-image: linear-gradient(to right, #E31C25, #BB000E);
+}
+
+.bayan-down-icon {
+    height: 3rem;
+    width: 3rem;
+    fill: #1C1C1C;
+    margin-right: 2rem;
+    transition: .2s all .1s;
+}
+
+.bayan-wrapper {
+    min-width: 100%;
+    min-height: 5rem;
+    background-image: linear-gradient(to bottom right, #111111, #1C1C1C);
+    color: white;
+    border-radius: .6rem;
+    overflow: hidden;
+    box-shadow: 0 0 6rem rgba(0, 0, 0, .5);
+}
+
+.bayan-toggle {
+    display: none;
+}
+
+.bayan-content {
+    font-weight: 300;
+    font-size: 2.3rem;
+    margin-left: 2rem;
+    color: #1C1C1C;
+    transition: .2s all .1s;
+}
+
+.bayan-img {
+    display: block;
+    margin: 1.5rem auto;
+    width: 21rem;
+    height: 0;
+    opacity: 0;
+    border-radius: .3rem;
+    filter: blur(.3rem);
+    will-change: height, width, transform;
+    transition:
+        opacity .2s,
+        height .5s cubic-bezier(.4, .9, 0, 1.08),
+        width .3s cubic-bezier(.4, .9, 0, 1.08) .4s,
+        transform .3s,
+        filter .2s;
+}
+
+.bayan-toggle:checked~.bayan-img {
+    margin: 3rem auto;
+    height: 30rem;
+    width: 25rem;
+    opacity: 1;
+    filter: blur(0);
+    animation: bayanClick .5s;
+}
+
+.bayan-toggle:checked+.bayan-head>.bayan-content {
+    color: white;
+}
+
+.bayan-toggle:checked+.bayan-head>.bayan-down-icon {
+    fill: white;
+}
+
+.bayan-toggle:checked+.bayan-head>.bayan-down-icon {
+    transform: rotate(180deg);
+}
